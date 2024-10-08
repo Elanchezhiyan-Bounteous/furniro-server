@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "vkU2nybbaES34ONtbEJeVOCBhXHLcNJhCrLFtsP1txU=",
+  "Source": "furniro-server",
+  "BasePath": "_content/furniro-server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
