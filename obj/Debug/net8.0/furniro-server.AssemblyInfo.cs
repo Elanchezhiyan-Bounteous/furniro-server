@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("furniro-server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c2c3fcf7facf0eab3d84afa798c7e408fabb02b")]
 [assembly: System.Reflection.AssemblyProductAttribute("furniro-server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("furniro-server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

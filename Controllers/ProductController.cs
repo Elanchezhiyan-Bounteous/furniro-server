@@ -102,6 +102,44 @@ namespace furniro_server.Controllers
             return Ok(productResponses);
         }
 
+        [HttpGet("{category:string}")]
+        public async Task<IActionResult> GetProductsByCategory(string category)
+        {
+            var response = await _client.From<Product>()
+                .Where(n => n.Category == category)
+                .Get();
+
+            var products = response.Models;
+
+            if (products is null || !products.Any())
+            {
+                return NotFound();
+            }
+
+            var productResponses = products.Select(product => new ProductResponse
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Desc = product.Desc,
+                Category = product.Category,
+                Src = product.Src,
+                Price = product.Price,
+                OriginalPrice = product.OriginalPrice,
+                Discount = product.Discount,
+                Reviews = product.Reviews,
+                Rating = product.Rating,
+                Sku = product.Sku,
+                Tags = product.Tags,
+                Sizes = product.Sizes,
+                Colors = product.Colors,
+                DescriptionImages = product.DescriptionImages,
+                ProductGallery = product.ProductGallery,
+                CreatedAt = product.CreatedAt
+            }).ToList();
+
+            return Ok(productResponses);
+        }
+
 
         [HttpGet("{id:long}")]
         public async Task<IActionResult> GetProduct(long id)
